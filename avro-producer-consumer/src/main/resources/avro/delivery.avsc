@@ -1,0 +1,48 @@
+{
+    "type": "record",
+    "name": "Delivery",
+    "namespace": "data",
+    "fields": [
+        {
+            "name": "CreatedAt",
+            "type": "long"
+        },
+        {
+            "name": "Id",
+            "type": "int"
+        },
+        {
+            "name": "Items",
+            "type": {
+                "type": "array",
+                "items": {
+                    "type": "record",
+                    "name": "Item",
+                    "fields": [
+                        {
+                            "name": "Id",
+                            "type": "int"
+                        },
+                        {
+                            "name": "Name",
+                            "type": "string"
+                        },
+                        {
+                            "name": "Quantity",
+                            "type": "int"
+                        }
+                    ]
+                },
+                "java-class": "java.util.List"
+            }
+        },
+        {
+            "name": "Name",
+            "type": "string"
+        },
+        {
+            "name": "Price",
+            "type": "double"
+        }
+    ]
+}
